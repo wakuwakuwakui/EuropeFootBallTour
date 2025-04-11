@@ -4,9 +4,9 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    min-height: 100vh; /* 画面全体の高さを確保 */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* ヘッダー、メイン、フッターを縦に並べる */
+    flex-direction: column;
 }
 
 header {
@@ -18,27 +18,39 @@ header {
 
 h1 {
     margin: 0;
+    font-size: 1.8rem;
 }
 
 nav {
     margin: 20px 0;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
+    background: #e8491d;
+    border-radius: 5px;
 }
 
 nav a:hover {
-    background: #e8491d;
+    background: #d73814;
 }
 
 main {
-    flex: 1; /* メインコンテンツが画面の余白を埋める */
+    flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    box-sizing: border-box;
 }
 
 article {
@@ -49,6 +61,14 @@ article {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 footer {
     text-align: center;
     background: #35424a;
@@ -57,4 +77,29 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    article {
+        padding: 15px;
+    }
 }
