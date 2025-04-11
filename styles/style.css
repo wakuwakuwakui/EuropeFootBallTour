@@ -4,14 +4,15 @@ body {
     background-color: #f4f4f4;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    min-height: 100vh; /* 画面全体の高さを確保 */
+    display: flex;
+    flex-direction: column; /* ヘッダー、メイン、フッターを縦に並べる */
 }
 
 header {
     background: #35424a;
     color: #ffffff;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
@@ -33,11 +34,11 @@ nav a:hover {
     background: #e8491d;
 }
 
-.container {
-    max-width: 1200px; /* 最大幅を1200pxに設定 */
-    margin: 0 auto;    /* 中央揃え */
-    padding: 20px;     /* 内側の余白を追加 */
-    overflow: hidden;
+main {
+    flex: 1; /* メインコンテンツが画面の余白を埋める */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 article {
@@ -50,11 +51,9 @@ article {
 
 footer {
     text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 20px;
     background: #35424a;
     color: #ffffff;
+    padding: 10px 20px;
     position: relative;
     bottom: 0;
     width: 100%;
